@@ -452,7 +452,7 @@ EduFlash leverages machine learning for content generation and real-time feedbac
 \subsection{Software Requirements}
 \begin{itemize}
     \item \textbf{Operating System:} Windows 10, macOS, or Linux-based operating systems.
-    \item \textbf{Development Framework:} The platform is built using Streamlit, SQLite, and Groq, ensuring scalability and ease of maintenance.
+    \item \textbf{Development Framework:} The platform is built using Streamlit, offering an interactive and responsive interface, while the backend handles data processing and storage.
     \item \textbf{Database:} SQLite is used to store user data, book records, flashcards, and quizzes.
     \item \textbf{Libraries and Tools:} The platform will leverage machine learning libraries for content generation, such as PyPDF2 for natural language processing.
     \item \textbf{Authentication:} Auth0 is a flexible, secure authentication and authorization platform that simplifies user login and identity management. It provides features like social logins, multi-factor authentication, and role-based access control, ensuring a seamless and secure authentication process for applications.
@@ -463,18 +463,11 @@ EduFlash leverages machine learning for content generation and real-time feedbac
 
 
 \chapter{System Design}
-\\
-\\
-\\
-This chapter presents the system design of EduFlash, focusing on its architecture and key components.In the following sections, we will delve into the system architecture and detail the components that contribute to an effective and engaging learning environment.
 
-
-
-
+% Level 0 DFD
 \subsection{Level 0 DFD}
 \Large
 This diagram provides a high-level overview of the EduFlash system, illustrating the main features. It shows how user interactions with the system lead to the generation of learning content. The Level 0 DFD highlights the core processes without diving into the specifics of data flow between sub-components. \\
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{DFD 0.png}
@@ -482,13 +475,12 @@ This diagram provides a high-level overview of the EduFlash system, illustrating
 \end{figure}
 \clearpage
 
-
 \vspace{-\baselineskip} % Adjust vertical space here
 
+% Level 1 DFD
 \subsection{Level 1 DFD}
 \Large
 The Level 1 DFD expands on the Level 0 DFD by detailing the main processes identified previously, breaking them down into more specific sub-processes. It illustrates the interactions between these sub-processes and the data flows that connect them. \\
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{DFD level 1 part 1.png}
@@ -503,17 +495,56 @@ The Level 1 DFD expands on the Level 0 DFD by detailing the main processes ident
 
 \vspace{-\baselineskip} % Adjust vertical space here
 
+% Use Case Diagram
 \subsection{Use Case Diagram}
 \Large
 The Use Case Diagram provides a visual representation of the interactions between users (students and educators) and the EduFlash system. It outlines the key functionalities and how different users will interact with the platform to enhance the learning experience. \\
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{usecasediagram.png}
     \caption{Use Case Diagram}
 \end{figure}
+\clearpage
 
 \section{Modular Design}
+
+% Authentication Module
+\subsection{Authentication Module}
+The authentication module manages user access through secure login and signup processes. It ensures that users can safely log in and register, maintaining data integrity and security.
+
+% Dashboard
+\subsection{Dashboard}
+The dashboard provides an overview of user activities and progress. It is designed to be intuitive and informative, offering insights into user performance and engagement.
+
+% Flashcard Session
+\subsection{Flashcard Session}
+This module facilitates interactive learning through flashcards. It dynamically generates questions and answers to help users reinforce their knowledge.
+
+% Saved Flashcard Session
+\subsection{Saved Flashcard Session}
+Allows users to revisit previously saved flashcards, enabling continuous learning and review of past materials.
+
+% Test Session
+\subsection{Test Session}
+Engages users in quizzes and tests to reinforce learning. It adapts to user performance to provide a tailored testing experience.
+
+% Community
+\subsection{Community}
+Facilitates interaction and collaboration among users, fostering a learning community where users can share insights and support each other.
+
+% Test Insights
+\subsection{Test Insights}
+Provides detailed analytics and insights on user performance, highlighting strengths and areas for improvement.
+
+% Graph and Table Section
+\subsection{Graph and Table Section}
+Displays data visualizations to track progress and performance, offering users a clear view of their learning journey.
+
+\chapter{System Implementation}
+\section{Overview}
+The system implementation of EduFlash involves both frontend and backend components, integrated to provide a cohesive user experience. The frontend is developed using Streamlit, offering an interactive and responsive interface, while the backend handles data processing and storage.
+
+\section{Modular Implementation}
 
 % Authentication Module
 \subsection{Authentication Module}
@@ -663,184 +694,6 @@ The EduFlash platform is designed with several key modules to ensure a seamless 
     \item \textbf{Real-Time Feedback:} Implements interactive elements to assess student understanding and adapt teaching strategies accordingly.
     \item \textbf{Data Management:} Uses SQLite for efficient storage and retrieval of user data, flashcards, and progress tracking.
 \end{itemize}
-
-\chapter{System Implementation}
-\section{Overview}
-The system implementation of EduFlash involves both frontend and backend components, integrated to provide a cohesive user experience. The frontend is developed using Streamlit, offering an interactive and responsive interface, while the backend handles data processing and storage.
-
-\section{Modular Design}
-
-% Authentication Module
-\subsection{Authentication Module}
-The authentication module manages user access through secure login and signup processes.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{login.png}
-\caption{Login Screen}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{signup.png}
-\caption{Signup Screen}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{login-code.png}
-\caption{Login Code Snippet}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{signup-code.png}
-\caption{Signup Code Snippet}
-\end{figure}
-
-% Dashboard
-\subsection{Dashboard}
-The dashboard provides an overview of user activities and progress.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{dashboard.png}
-\caption{User Dashboard}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{dashboard-code.png}
-\caption{Dashboard Code Snippet}
-\end{figure}
-
-% Flashcard Session
-\subsection{Flashcard Session}
-This module facilitates interactive learning through flashcards.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{flashcard-question.png}
-\caption{Flashcard Session - Question}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{flashcard-answer.png}
-\caption{Flashcard Session - Answer}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{saving-flashcard.png}
-\caption{Flashcard Session - Saving}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{flashcard-groq-code.png}
-\caption{Flashcard Question Code Snippet}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{flashcard-ans-groq-code.png}
-\caption{Flashcard Answer Code Snippet}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{simple-exp-code.png}
-\caption{Flashcard Explanation Code Snippet}
-\end{figure}
-
-% Saved Flashcard Session
-\subsection{Saved Flashcard Session}
-Allows users to revisit previously saved flashcards.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{saved-flashcard.png}
-\caption{Saved Flashcards}
-\end{figure}
-
-% Test Session
-\subsection{Test Session}
-Engages users in quizzes and tests to reinforce learning.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{test.png}
-\caption{Test Session - Question}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{test-score-result.png}
-\caption{Test Session - Results}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{test-code.png}
-\caption{Test Code Snippet}
-\end{figure}
-
-% Community
-\subsection{Community}
-Facilitates interaction and collaboration among users.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{community.png}
-\caption{Community Features}
-\end{figure}
-
-% Test Insights
-\subsection{Test Insights}
-Provides detailed analytics and insights on user performance.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{test-insights.png}
-\caption{Test Insights}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{test-insights-code.png}
-\caption{Test Insights Code Snippet}
-\end{figure}
-
-% Graph and Table Section
-\subsection{Graph and Table Section}
-Displays data visualizations to track progress and performance.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{graph-table.png}
-\caption{Graphs and Tables}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{graph-table-code.png}
-\caption{Graph and Table Code Snippet}
-\end{figure}
-
-\section{Technology Stack}
-\subsection{Frontend}
-\begin{itemize}
-    \item Streamlit for server-side rendering and client-side interactivity.
-    \item Tailwind CSS for a responsive and modern UI.
-    \item Recharts for data visualization in progress tracking.
-\end{itemize}
-
-\subsection{Backend}
-\begin{itemize}
-    \item Python and SQLite for API development.
-    \item SQLite for data persistence.
-    \item Auth0 for authentication and access control.
-\end{itemize}
-
-\subsection{AI and Machine Learning}
-\begin{itemize}
-    \item Groq API for natural language processing and flashcard generation.
-    \item Python-based preprocessing scripts for text extraction.
-\end{itemize}
-
-\section{Deployment Strategy}
-EduFlash is deployed using Vercel for frontend hosting and a cloud-based SQLite instance for the database. The backend API is hosted on a Python server with auto-scaling capabilities.
-
-\section{Security Considerations}
-\begin{itemize}
-    \item Encrypted user authentication via Auth0.
-    \item Secure API endpoints with token-based authentication.
-    \item Data encryption for stored flashcards and user progress.
-\end{itemize}
-
-\section{Conclusion}
-The implementation of EduFlash follows a structured, modular approach to ensure scalability, security, and effectiveness in delivering an interactive learning experience. Each component is optimized to work seamlessly, providing students with an efficient study tool tailored to their learning needs.
-
 
 \chapter{Future Scope}
 
