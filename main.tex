@@ -350,10 +350,6 @@ This paper explores the use of AI techniques to automatically generate flashcard
 
 \textbf{Reference:} Smith, J., \& Zhang, T. (2021). \textit{AI-based Automatic Flashcard Generation for Learning Enhancement}. Journal of Educational Technology, 48(3), 122-136. \\
 
-\subsection{Artificial Intelligence-Enabled Intelligent Assistant for Personalized and Adaptive Learning in Higher Education}
-This paper presents the Artificial Intelligence-Enabled Intelligent Assistant (AIIA), a framework designed to enhance personalized learning in higher education. By leveraging advanced AI and Natural Language Processing (NLP), the AIIA system reduces cognitive load on learners and offers personalized support tailored to individual needs. The platform provides functionalities such as responsive question-answering and automated assessments. The findings suggest that integrating intelligent assistants can significantly improve engagement and learning outcomes. Additionally, the research outlines the potential for AIIA to revolutionize the educational landscape by fostering self-regulated learning and enhancing student-faculty communication. Overall, the AIIA framework represents a significant step toward realizing the transformative potential of AI in education.
-
-\textbf{Reference:} Ramteja Sajja, Yusuf Sermet, Muhammed Cikmaz, David Cwiertny, Ibrahim Demir. (2023). \textit{Artificial Intelligence-Enabled Intelligent Assistant for Personalized and Adaptive Learning in Higher Education}. University of Iowa. \\
 
 \subsection{Leveraging NLP for Interactive Learning in Educational Platforms}
 This paper investigates how Natural Language Processing (NLP) can enhance interactive learning experiences within educational platforms. It focuses on using NLP for content extraction, query processing, and real-time student interactions to improve learning outcomes. The research highlights the importance of integrating conversational agents that can assess the learner's understanding and provide adaptive learning paths. The concepts discussed are highly relevant to the EduFlash project, where AI will assess comprehension of flashcards and provide personalized feedback.
@@ -396,9 +392,6 @@ The proposed system, \textbf{EduFlash: Interactive Learning Platform}, seeks to 
     \item \textbf{User Management:} Students must be able to create accounts, log in, and view their learning history across multiple sessions.
     \item \textbf{AI-Powered Insights:} The system must provide teachers with analytics on student performance, highlighting areas where students struggle and recommending personalized teaching strategies.
 \end{itemize}
-
-\\
-The proposed EduFlash platform addresses the gaps in current educational tools by providing an interactive, adaptive, and focused learning experience, while also offering data-driven insights for teachers and promoting collaborative study habits.
 
 \chapter{System Study}
 
@@ -682,18 +675,6 @@ Displays data visualizations to track progress and performance.
 \includegraphics[width=0.9\textwidth]{graph-table-code.png}
 \caption{Graph and Table Code Snippet}
 \end{figure}
-\clearpage
-\FloatBarrier % Ensure all floats are processed before moving to the next section
-
-\section{Modules Used}
-The EduFlash platform is designed with several key modules to ensure a seamless and effective learning experience:
-\begin{itemize}
-    \item \textbf{User Authentication:} Managed using Auth0, providing secure login and role-based access.
-    \item \textbf{PDF Processing:} Utilizes PyPDF2 for extracting text from uploaded PDFs, which is then analyzed for flashcard generation.
-    \item \textbf{Flashcard Generation:} Employs AI algorithms via the Groq API to create personalized flashcards based on extracted content.
-    \item \textbf{Real-Time Feedback:} Implements interactive elements to assess student understanding and adapt teaching strategies accordingly.
-    \item \textbf{Data Management:} Uses SQLite for efficient storage and retrieval of user data, flashcards, and progress tracking.
-\end{itemize}
 
 \chapter{Future Scope}
 
